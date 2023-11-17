@@ -1,5 +1,154 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font, Arial);
+  font-size: 18px;
+  background-color: var(--bg-color);
+}
+
+.heading {
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+}
+
+.title-decor {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+}
+
+.text-block {
+  color: var(--text-color);
+  line-height: 23.4px;
+}
+
+/* header */
+
+.header {
+  position: relative;
+  min-height: 668px;
+  padding: 10px;
+  background-image: url(/images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header__lamp {
+  position: absolute;
+  right: 38px;
+  display: none;
+}
+
+.header__lamp-text {
+  position: relative;
+  display: inline-block;
+  color: var(--accent-color);
+  line-height: 25px;
+}
+
+.header__lamp-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -19px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
+  transform: translateY(-50%);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.theme_dark .header__lamp {
+  display: block;
+}
+
+.header__theme-menu {
+  display: grid;
+  justify-content: end;
+  margin-block-start: clamp(4.125rem, -3.3893rem + 32.0611vw, 12rem);
+  margin-block-end: clamp(4.0625rem, -2.3783rem + 27.4809vw, 10.8125rem);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 2px 13px;
+  color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.header__theme-menu-button:disabled {
+  pointer-events: none;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  margin-block-end: clamp(3.4375rem, -2.9437rem + 27.2265vw, 10.125rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__subtitle {
+  margin-left: auto;
+  margin-block-end: clamp(3.5rem, -2.8812rem + 27.2265vw, 10.1875rem);
+  max-inline-size: 364px;
+}
+
+/* content */
+
+.content__title {
+  color: var(--accent-color);
+}
+
+/* footer */
+
+.footer {
+  position: relative;
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
