@@ -4,9 +4,16 @@
 
 :root {
   --bg-color: #000028;
-  --text-color: #F1B2CE;
-  --heading-color: #DB00FF;
-  --accent-color: #FF0070;
+  --text-color: #f1b2ce;
+  --heading-color: #db00ff;
+  --accent-color: #ff0070;
+  --title-decor-color: #000028;
+  --cover-image: url(../images/cover-image-dark.png);
+  --menu-button-color: #ff0070;
+  --content-title-color: #ff0070;
+  --menu-button-hover-color: rgba(255, 0, 112, 0.4);
   --main-font: 'IBM Plex mono';
   --main-font-size: 18px;
+  --main-section-margin: clamp(40px, 20.8px + 5.089vw, 60px); /* равномерный внешний отступ от 40px до 60px */
+  --content-section-padding: clamp(10px, 0.4px + 2.545vw, 20px); /* равномерный внутренний отступ от 10px до 20px */
 }
