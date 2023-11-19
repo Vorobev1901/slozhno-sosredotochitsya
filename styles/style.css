@@ -45,7 +45,7 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   height: 100vh;
-  padding: var(--content-section-padding); 
+  padding: var(--content-section-padding);
 }
 
 .decorated-zone::before,
