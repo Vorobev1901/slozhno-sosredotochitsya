@@ -44,7 +44,7 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: var(--content-section-padding);
 }
 
@@ -74,7 +74,7 @@
   position: absolute;
   top: var(--content-section-padding);
   right: clamp(38px, 28.4px + 2.545vw, 48px);
-  display: none;
+  display: block;
 }
 
 .header__lamp-text {
@@ -88,13 +88,13 @@
   content: '';
   position: absolute;
   top: 50%;
-  right: -19px;
+  right: -20px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  filter: drop-shadow(0 0 4px var(--accent-color));
+  box-shadow: 0 0 4px 2px var(--accent-color);
   transform: translateY(-50%);
-  inline-size: 9px;
-  block-size: 9px;
+  inline-size: 10px;
+  block-size: 10px;
 }
 
 .header__theme-menu {
@@ -133,7 +133,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--menu-button-hover-color);
+  outline: 1px solid var(--menu-button-hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -169,22 +169,15 @@
 
 .content {
   display: grid;
-  gap: 20px;
-}
-
-.why-focus,
-.what-focus,
-.how-focus {
   grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .content:not(:last-of-type) {
   margin-bottom: clamp(50px, 21.3px + 7.634vw, 80px);
 }
 
-.content__title,
-.content__subtitle,
-.gallery__subtitle {
+.title-type{
   font-size: 18px;
   line-height: 23.4px;
 }
@@ -275,7 +268,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: var(--content-section-padding);
 }
 
@@ -284,7 +277,6 @@
 }
 
 @media (width > 425px) {
-
   .gallery__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, min-content);
@@ -308,13 +300,11 @@
     max-inline-size: clamp(364px, -17px + 49.6094vw, 491px);
   }
 
-  .why-focus,
-  .what-focus,
-  .how-focus {
+  .content {
     grid-template-columns: 1fr 2fr;
   }
 
-  .what-focus .content__list {
+  .content-alignment .content__list {
     grid-column: span 2;
   }
 
@@ -330,17 +320,15 @@
 
 @media (width >= 1024px) {
   .header__theme-menu {
-    display: grid;
     justify-content: center;
     align-self: start;
   }
 
-  .what-focus .content__list {
+  .content-alignment .content__list {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
   }
 }

@@ -22,4 +22,12 @@
     --cover-image: url(../images/cover-image-light.png);
     --menu-button-hover-color: rgba(50, 49, 45, 0.4);
   }
+
+  .header__lamp {
+    display: none;
+  }
+}
+
+.page.theme_light .header__lamp {
+  display: none;
 }
