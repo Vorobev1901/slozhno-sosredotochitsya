@@ -2,6 +2,11 @@
   font-family: var(--main-font, serif);
   font-size: 18px;
   background-color: var(--bg-color);
+  background-attachment: fixed;
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .heading {
@@ -40,12 +45,7 @@
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   height: 100vh;
-  padding: var(--content-section-padding);
-  background-image: var(--cover-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  padding: var(--content-section-padding); 
 }
 
 .decorated-zone::before,
